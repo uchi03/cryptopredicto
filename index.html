@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Prediction & Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Home')">HOME</button>
+            <button class="tablinks" onclick="openTab(event, 'LivePrice')">LIVE PRICE</button>
+            <button class="tablinks" onclick="openTab(event, 'PricePrediction')">PRICE PREDICTION</button>
+        </div>
+
+
+        <div id="Home" class="tabcontent">
+            <h1 style="color: white; font-size: 48px; letter-spacing: 10px;">CRYPTO PREDICTO</h1>
+            <input type="text" id="cryptoInput" placeholder="Enter cryptocurrency name...">
+            <select id="currencySelect">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="PHP">PHP</option>
+                <option value="AUD">AUD</option>
+                <option value="CAD">CAD</option>
+                <option value="SGD">SGD</option>
+                <option value="HKD">HKD</option>
+                <option value="NZD">NZD</option>
+
+            </select>
+            <div class="buttons">
+                <button onclick="searchCrypto()">Search</button>
+                <button onclick="clearFields()">Clear</button>
+            </div>
+
+            <div id="result"> Enter crypto name and currency to see current price.</div>
+        </div>
+
+        <div id="LivePrice" class="tabcontent">
+            <h2 style="color: white; font-size: 48px;">TOP 5 CRYPTO</h2>
+            <p style="color: white; font-size: 20px;">(by market cap)</p>
+            <div id="livePrices"></div>
+        </div>
+
+        <div id="PricePrediction" class="tabcontent">
+
+            <iframe src="https://joseuchi.bubbleapps.io/version-test" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="550px" width="900px" allowfullscreen></iframe>
+
+    </div>
+
+</body>
+</html>
